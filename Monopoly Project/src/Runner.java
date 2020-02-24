@@ -23,6 +23,7 @@ public class Runner
 
 					{
 						Directions.howToPlay();
+						System.out.println();
 
 						SetUpPlayer.setUpPlaying();
 
@@ -60,10 +61,10 @@ public class Runner
 
 						// land on tile
 						currentPlayer.changePosition(roll);
-
+					//	System.out.println("You've landed on: " + Board.getTile(currentPlayer.position).getName());
 						Board.getBoard()[currentPlayer.getPosition()].landOnTile();
 						// Board.getBoard();
-						Board.getTile(currentPlayer.position).getName();
+						System.out.println("You've landed on: " + Board.getTile(currentPlayer.position).getName());
 
 						// checks money status, bankrupt = lose game
 						currentPlayer.endCondition();
